@@ -7,23 +7,111 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB72E7EB11C2F5016E8534F8 /* Pods_Optavi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01954A878217D66ED3C75B8F /* Pods_Optavi.framework */; };
+		F207E99A2026F8F200AE0938 /* favStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207E9992026F8F200AE0938 /* favStorage.swift */; };
+		F287D4F42022770700047BD2 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287D4F32022770700047BD2 /* constants.swift */; };
 		F2A232C220223DF90099F871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A232C120223DF90099F871 /* AppDelegate.swift */; };
-		F2A232C420223DF90099F871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A232C320223DF90099F871 /* ViewController.swift */; };
+		F2A232C420223DF90099F871 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A232C320223DF90099F871 /* mainVC.swift */; };
 		F2A232C720223DF90099F871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A232C520223DF90099F871 /* Main.storyboard */; };
 		F2A232CA20223DF90099F871 /* Optavi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2A232C820223DF90099F871 /* Optavi.xcdatamodeld */; };
 		F2A232CC20223DF90099F871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A232CB20223DF90099F871 /* Assets.xcassets */; };
 		F2A232CF20223DF90099F871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A232CD20223DF90099F871 /* LaunchScreen.storyboard */; };
+		F2A232DA202256070099F871 /* itemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A232D9202256070099F871 /* itemCell.swift */; };
+		F2A232DC202270800099F871 /* downloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A232DB202270800099F871 /* downloadData.swift */; };
+		F2A232F6202273210099F871 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A232E92022728F0099F871 /* Alamofire.framework */; };
+		F2A232F7202273210099F871 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2A232E92022728F0099F871 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F2A232E82022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		F2A232EA2022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		F2A232EC2022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		F2A232EE2022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		F2A232F02022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		F2A232F22022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		F2A232F42022728F0099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		F2A232F8202273210099F871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2A232FA202273210099F871 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2A232F7202273210099F871 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		01954A878217D66ED3C75B8F /* Pods_Optavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Optavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65072FEB7E4BA01FE199249 /* Pods-Optavi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Optavi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Optavi/Pods-Optavi.debug.xcconfig"; sourceTree = "<group>"; };
+		EA98B6195157522FD9937D03 /* Pods-Optavi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Optavi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Optavi/Pods-Optavi.release.xcconfig"; sourceTree = "<group>"; };
+		F207E9992026F8F200AE0938 /* favStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favStorage.swift; sourceTree = "<group>"; };
+		F287D4F32022770700047BD2 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		F2A232BE20223DF90099F871 /* Optavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Optavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A232C120223DF90099F871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2A232C320223DF90099F871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2A232C320223DF90099F871 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		F2A232C620223DF90099F871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2A232C920223DF90099F871 /* Optavi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Optavi.xcdatamodel; sourceTree = "<group>"; };
 		F2A232CB20223DF90099F871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2A232CE20223DF90099F871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A232D020223DF90099F871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A232D9202256070099F871 /* itemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCell.swift; sourceTree = "<group>"; };
+		F2A232DB202270800099F871 /* downloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadData.swift; sourceTree = "<group>"; };
+		F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +119,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A232F6202273210099F871 /* Alamofire.framework in Frameworks */,
+				AB72E7EB11C2F5016E8534F8 /* Pods_Optavi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D32AADD0FDA5E750515720 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B65072FEB7E4BA01FE199249 /* Pods-Optavi.debug.xcconfig */,
+				EA98B6195157522FD9937D03 /* Pods-Optavi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8D61890681E182054702CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01954A878217D66ED3C75B8F /* Pods_Optavi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F287D4EB202276DE00047BD2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F287D4F32022770700047BD2 /* constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F2A232B520223DF90099F871 = {
 			isa = PBXGroup;
 			children = (
+				F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */,
 				F2A232C020223DF90099F871 /* Optavi */,
 				F2A232BF20223DF90099F871 /* Products */,
+				52D32AADD0FDA5E750515720 /* Pods */,
+				C8D61890681E182054702CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +174,57 @@
 		F2A232C020223DF90099F871 /* Optavi */ = {
 			isa = PBXGroup;
 			children = (
+				F2A232D62022458C0099F871 /* Model */,
+				F2A232D7202245940099F871 /* View */,
+				F2A232D82022459B0099F871 /* Controller */,
+				F287D4EB202276DE00047BD2 /* Utilities */,
 				F2A232C120223DF90099F871 /* AppDelegate.swift */,
-				F2A232C320223DF90099F871 /* ViewController.swift */,
 				F2A232C520223DF90099F871 /* Main.storyboard */,
-				F2A232CB20223DF90099F871 /* Assets.xcassets */,
 				F2A232CD20223DF90099F871 /* LaunchScreen.storyboard */,
+				F2A232CB20223DF90099F871 /* Assets.xcassets */,
 				F2A232D020223DF90099F871 /* Info.plist */,
 				F2A232C820223DF90099F871 /* Optavi.xcdatamodeld */,
 			);
 			path = Optavi;
+			sourceTree = "<group>";
+		};
+		F2A232D62022458C0099F871 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2A232DB202270800099F871 /* downloadData.swift */,
+				F207E9992026F8F200AE0938 /* favStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2A232D7202245940099F871 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2A232D9202256070099F871 /* itemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2A232D82022459B0099F871 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2A232C320223DF90099F871 /* mainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2A232DE2022728E0099F871 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2A232E92022728F0099F871 /* Alamofire.framework */,
+				F2A232EB2022728F0099F871 /* Alamofire iOS Tests.xctest */,
+				F2A232ED2022728F0099F871 /* Alamofire.framework */,
+				F2A232EF2022728F0099F871 /* Alamofire macOS Tests.xctest */,
+				F2A232F12022728F0099F871 /* Alamofire.framework */,
+				F2A232F32022728F0099F871 /* Alamofire tvOS Tests.xctest */,
+				F2A232F52022728F0099F871 /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,13 +234,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A232D320223DF90099F871 /* Build configuration list for PBXNativeTarget "Optavi" */;
 			buildPhases = (
+				3AAB7215F04B8C07BC560CCF /* [CP] Check Pods Manifest.lock */,
 				F2A232BA20223DF90099F871 /* Sources */,
 				F2A232BB20223DF90099F871 /* Frameworks */,
 				F2A232BC20223DF90099F871 /* Resources */,
+				F2A232FA202273210099F871 /* Embed Frameworks */,
+				32787AA0E05EA1F7D03E49F7 /* [CP] Embed Pods Frameworks */,
+				9A827FC4292C92176CBEFB69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F2A232F9202273210099F871 /* PBXTargetDependency */,
 			);
 			name = Optavi;
 			productName = Optavi;
@@ -114,12 +279,70 @@
 			mainGroup = F2A232B520223DF90099F871;
 			productRefGroup = F2A232BF20223DF90099F871 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F2A232DE2022728E0099F871 /* Products */;
+					ProjectRef = F2A232DD2022728E0099F871 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F2A232BD20223DF90099F871 /* Optavi */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F2A232E92022728F0099F871 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A232E82022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232EB2022728F0099F871 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = F2A232EA2022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232ED2022728F0099F871 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A232EC2022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232EF2022728F0099F871 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = F2A232EE2022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232F12022728F0099F871 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A232F02022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232F32022728F0099F871 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = F2A232F22022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A232F52022728F0099F871 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A232F42022728F0099F871 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F2A232BC20223DF90099F871 /* Resources */ = {
@@ -134,18 +357,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32787AA0E05EA1F7D03E49F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Optavi/Pods-Optavi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HidingNavigationBar/HidingNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HidingNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Optavi/Pods-Optavi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AAB7215F04B8C07BC560CCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Optavi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A827FC4292C92176CBEFB69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Optavi/Pods-Optavi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2A232BA20223DF90099F871 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A232C420223DF90099F871 /* ViewController.swift in Sources */,
+				F2A232DA202256070099F871 /* itemCell.swift in Sources */,
+				F2A232DC202270800099F871 /* downloadData.swift in Sources */,
+				F2A232C420223DF90099F871 /* mainVC.swift in Sources */,
 				F2A232CA20223DF90099F871 /* Optavi.xcdatamodeld in Sources */,
 				F2A232C220223DF90099F871 /* AppDelegate.swift in Sources */,
+				F207E99A2026F8F200AE0938 /* favStorage.swift in Sources */,
+				F287D4F42022770700047BD2 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2A232F9202273210099F871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = F2A232F8202273210099F871 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F2A232C520223DF90099F871 /* Main.storyboard */ = {
@@ -276,7 +567,9 @@
 		};
 		F2A232D420223DF90099F871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65072FEB7E4BA01FE199249 /* Pods-Optavi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW237Y3M7X;
@@ -291,7 +584,9 @@
 		};
 		F2A232D520223DF90099F871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA98B6195157522FD9937D03 /* Pods-Optavi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW237Y3M7X;

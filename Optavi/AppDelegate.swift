@@ -1,16 +1,9 @@
-//
-//  AppDelegate.swift
-//  Optavi
-//
-//  Created by userH309 on 31/01/2018.
-//  Copyright © 2018 shabibi. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
 
     var window: UIWindow?
 
@@ -75,7 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext ()
+    {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -88,6 +82,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 
+//Make app delegate accessible outside.
+let ad = UIApplication.shared.delegate as! AppDelegate
+//Add a shortcut to the persistent store view context.
+let viewContext = ad.persistentContainer.viewContext
