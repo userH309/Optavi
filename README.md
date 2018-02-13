@@ -6,8 +6,8 @@ This app lets you download ads and browse through them. You can sort between ad 
 It uses pods like Alamofire for json requests, SDWebImage for efficient image handling and HidingNavigationBar to create more space for the tableview.
 
 Check'em out:
-https://cocoapods.org/?q=alamofire
-https://cocoapods.org/?q=SDWebImage
+https://cocoapods.org/?q=alamofire  
+https://cocoapods.org/?q=SDWebImage  
 https://cocoapods.org/?q=HidingNavigationBar
 
 The plan further is to add some additional styling and implement a search bar.
