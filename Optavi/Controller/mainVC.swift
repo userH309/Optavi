@@ -203,10 +203,18 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         scrollTop()
     }
     
+    //We have to make sure that number of rows in section is bigger than 0, or else the app is going to crash since we're refering to row 0 when scrolling to top. We will not have a row if the array is empty.
     func scrollTop()
     {
-        itemsTableView.reloadData()
-        itemsTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        if itemsTableView.numberOfRows(inSection: 0) > 0
+        {
+            itemsTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            itemsTableView.reloadData()
+        }
+        else
+        {
+            itemsTableView.reloadData()
+        }
     }
     
     //For the user to remember what bottom bar button he tapped we render the image black for not yet tapped and blue for tapped.
