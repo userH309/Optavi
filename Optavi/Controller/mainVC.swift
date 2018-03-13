@@ -1,8 +1,7 @@
 import UIKit
 import HidingNavigationBar
 
-class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
-{
+class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var itemsTableView: UITableView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var favBtnLbl: UIBarButtonItem!
@@ -11,7 +10,6 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var jobBtn: UIButton!
     @IBOutlet weak var carBtn: UIButton!
     @IBOutlet weak var booksBtn: UIButton!
-    
     var favBtnStatus:Bool!
     var btnSelect = ""
     var navBarHideManager:HidingNavigationBarManager?
@@ -19,8 +17,7 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var favStorageInstance = favStorage()
     var filterArray = [downloadData]()
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
@@ -28,60 +25,50 @@ class mainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         buttonSelected()
         favBtnStatus = false
         favStorageInstance.load()
-        //We want to start downloading data as soon as the view loads. The download is marked completed when we have the data we want. Since the tableview does not contain anything yet, we have to reload the tableview in order to trigger the tableview function underneath, so the user can actually see the data we fetched.
-        downloadedData.jsonRequest
-        {
+        //Start downloading data as soon as the view loads.
+        downloadedData.jsonRequest {
             self.filterArray = self.downloadedData.storedDataArray
             self.itemsTableView.reloadData()
         }
     }
     
-    //We use the pod HidingNavigationBar to get a better user experience. When customer scrolls down, the nav bar will hide, when user scrolls up he/she will see the nav bar again.
-    override func viewWillAppear(_ animated: Bool)
-    {
+    //When user scrolls down, hide the nav bar, when scrolling up show it.
+    override func viewWillAppear(_ animated: Bool) {
         navBarHideManager?.viewWillAppear(true)
     }
-    override func viewDidLayoutSubviews()
-    {
+    override func viewDidLayoutSubviews() {
         navBarHideManager?.viewDidLayoutSubviews()
     }
-    override func viewWillDisappear(_ animated: Bool)
-    {
+    override func viewWillDisappear(_ animated: Bool) {
         navBarHideManager?.viewWillDisappear(true)
     }
-    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool
-    {
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
         navBarHideManager?.shouldScrollToTop()
         return true
     }
     
-    //We want our every row in the tableview to have a height of 170 so our data can fit inside of them.
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
+    //Set every row in the tableview to have a height of 170.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170.0
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        //User will select the array by tapping/not tapping the "favoritter" button. depending on this, we need to have enough rows so we can present all elements in the selected array to the tableview.
-        if favBtnStatus == false
-        {
+    //Make sure we have enough rows to present all elements in the selected array.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if favBtnStatus == false {
             return filterArray.count
         }
-        else
-        {
+        //Count values from favArray.
+        else {
             return favStorageInstance.favArray.count
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        //Use a dequeReusableCell so when a cell goes offscreen it will be reused when scrolling, this way is more memory efficient.
-        if let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? itemCell
-        {
-            if favBtnStatus == false
-            {
-                //We mainly pump out elements from the filterArray since the "favoritter" button is not tapped, if we detect that favArray has an element with the same itemID, we need to know the index number to the element in the favArray. If we try to get the element using the indexPath.row we will get an error "index out of range" because the amount of rows depends on the number of elements in the filterArray, which is most cases is a bigger array.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Use dequeReusableCell, when a cell goes offscreen it will be reused later.
+        if let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? itemCell {
+            //Run if "favoritter" button is not tapped.
+            if favBtnStatus == false {
+                //We mainly pump out elements from the filterArray since the , if we detect that favArray has an element with the same itemID, we need to know the index number to the element in the favArray. If we try to get the element using the indexPath.row we will get an error "index out of range" because the amount of rows depends on the number of elements in the filterArray, which is most cases is a bigger array.
                 if let i = favStorageInstance.favArray.index(where:
                     { $0.itemId == filterArray[indexPath.row].itemId })
                 {
